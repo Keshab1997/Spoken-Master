@@ -1,0 +1,75 @@
+Act as a Senior Frontend Developer. I need you to build a complete Spoken English Learning Web App called "SpeakMasterApp" using HTML, CSS, and Vanilla JavaScript. 
+
+Here is the exact folder structure you must follow:
+
+SpeakMasterApp/
+│
+├── index.html                   (Dashboard with Week cards)
+├── login.html                   (Simple login UI)
+├── signup.html                  (Simple signup UI)
+├── profile.html                 (User profile UI)
+│
+├── css/                         
+│   ├── style.css                (Global vars, fonts, header, footer)
+│   ├── home.css                 (Dashboard specific)
+│   ├── topic.css                (Chat bubble layout for learning)
+│   ├── practice.css             (Microphone animation and feedback UI)
+│   ├── grammar.css              (Rule card layout)
+│   ├── login.css                (Form layout)
+│   └── components.css           (Buttons, Alerts, Nav)
+│
+├── js/                          
+│   ├── supabaseClient.js        (Keep empty for now)
+│   ├── auth.js                  (Mock login logic using localStorage)
+│   ├── db.js                    (Mock progress saving in localStorage)
+│   ├── speech.js                (Core Web Speech API logic for listening)
+│   ├── grammar.js               (Quiz interaction logic)
+│   └── utils.js                 (Helper functions)
+│
+└── weeks/                       
+    ├── week1/ (Intro)           
+    │   ├── index.html, grammar.html
+    │   ├── topics/ [topic1.html, topic2.html]
+    │   ├── practice/ [session1.html, session2.html]
+    │   └── game/ [quiz.html, match.html]
+    │
+    ├── week2/ (My World) - Follow same structure as week1
+    └── week3/ (Daily Routine) - Follow same structure as week1
+
+---
+
+### 🚀 FUNCTIONAL REQUIREMENTS:
+
+1. **Design System (CSS):** 
+   - Use CSS Variables for colors (Primary: #4A90E2, Secondary: #50E3C2, Bg: #F4F7F6).
+   - Fully responsive for mobile devices.
+   - `topic.css`: Create a chat interface (left bubble for sender, right for receiver).
+   - `practice.css`: Create a large pulsing microphone button.
+
+2. **JavaScript Logic:**
+   - **`speech.js`**: Use `window.SpeechRecognition` or `webkitSpeechRecognition`. It should listen to the user, compare the transcript with a target phrase, and give feedback (Green text for correct, Red for wrong).
+   - **`auth.js`**: Create a fake login function. If user clicks "Login", save a flag in `localStorage` and redirect to `index.html`.
+
+3. **Content Populating (Crucial - Indian Context):**
+   - **Week 1 (Introduction):**
+     - Topic 1: Hello vs Hi (Amit & Priya dialogue).
+     - Topic 2: "I am from India/Kolkata".
+     - Grammar: Am/Is/Are rules.
+     - Practice: "My name is..."
+   - **Week 2 (My World):**
+     - Topic 1: Family (Father/Mother).
+     - Topic 2: Things (This/That).
+     - Practice: "This is my phone."
+   - **Week 3 (Routine):**
+     - Topic 1: Morning Routine (Wake up, Tea).
+     - Topic 2: Work/School (Go by bus).
+     - Grammar: Present Simple (S/ES rules).
+
+### 🛠️ EXECUTION PLAN:
+
+**Step 1:** Write the Code for the **Root HTML files** (`index.html`, `login.html`) and **All CSS files**.
+**Step 2:** Write the **JavaScript files**, especially the `speech.js` engine and `auth.js`.
+**Step 3:** Write the content for **Week 1** (All HTML files inside `weeks/week1/`).
+**Step 4:** Write the content for **Week 2** and **Week 3** following the same template as Week 1.
+
+Please start by generating **Step 1 and Step 2** fully.
